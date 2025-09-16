@@ -1,0 +1,45 @@
+muebleria/
+├── app/
+│   ├── controllers/
+│   │   ├── AuthController.php
+│   │   ├── ProductoController.php
+│   │   ├── CategoriaController.php
+│   │   ├── ClienteController.php
+│   │   └── VentaController.php
+│   ├── models/
+│   │   ├── Database.php
+│   │   ├── Producto.php
+│   │   ├── Categoria.php
+│   │   ├── Cliente.php
+│   │   ├── Venta.php
+│   │   └── Usuario.php
+│   ├── views/
+│   │   ├── layouts/
+│   │   │   └── main.php
+│   │   ├── auth/
+│   │   ├── productos/
+│   │   ├── categorias/
+│   │   ├── clientes/
+│   │   └── ventas/
+│   └── core/
+│       ├── Router.php
+│       ├── Controller.php
+│       ├── Model.php
+│       └── Auth.php
+├── api/
+│   ├── v1/
+│   │   ├── ProductoApi.php
+│   │   ├── CategoriaApi.php
+│   │   └── AuthApi.php
+│   └── .htaccess
+├── config/
+│   ├── database.php
+│   └── constants.php
+├── public/
+│   ├── index.php
+│   ├── .htaccess
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── vendor/
+└── .htaccess
