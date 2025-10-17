@@ -1,6 +1,0 @@
-Entidad Atributos principales
-productos id (PK), nombre, descripcion, categoria, precio, stock
-clientes id (PK), nombre, email, telefono, password
-administradores id (PK), nombre, email, password, rol
-ventas id (PK), cliente_id (FK), fecha, total
-ventas_detalle id (PK), venta_id (FK), producto_id (FK), cantidad, precio_unitario

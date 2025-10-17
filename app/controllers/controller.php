@@ -1,6 +1,7 @@
 <?php
-require_once '../model/model.php'; 
-require_once '../view/catalogo.php';
+
+require_once './app/model/model.php';
+require_once './app/view/catalogo.php'; 
 
 
 class modelController {

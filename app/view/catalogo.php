@@ -1,6 +1,6 @@
  <?php
 
-require_once '../../libs/Smarty.class.php';
+require_once './libs/Smarty.class.php';
 
 class CatalogoView
 {
@@ -14,7 +14,7 @@ class CatalogoView
     public function renderTable($items)
     {
         $this->smarty->assign('items', $items);
-        $this->smarty->display('../../public/templates/tabla.tpl');
+        $this->smarty->display('/public/templates/tabla.tpl');
     }
 
     

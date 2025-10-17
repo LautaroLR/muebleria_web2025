@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2025-10-03 00:09:47
+/* Smarty version 3.1.34-dev-7, created on 2025-10-04 07:02:32
   from 'C:\xampp\htdocs\muebleria\public\templates\head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_68def82b78f649_51489554',
+  'unifunc' => 'content_68e0aa686d1f12_87457666',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e41a6b3e85b50ff465762d5bd22c37053dfd9aa5' => 
     array (
       0 => 'C:\\xampp\\htdocs\\muebleria\\public\\templates\\head.tpl',
-      1 => 1759442900,
+      1 => 1759443208,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_68def82b78f649_51489554 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68e0aa686d1f12_87457666 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
