@@ -9,12 +9,13 @@ class CatalogoView
     public function __construct()
     {
         $this->smarty = new Smarty();
+        $this->smarty->setTemplateDir(__DIR__ . '/../../public/templates/');
     }
 
     public function renderTable($items)
     {
         $this->smarty->assign('items', $items);
-        $this->smarty->display('/public/templates/tabla.tpl');
+        $this->smarty->display('tabla.tpl');
     }
 
     

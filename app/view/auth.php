@@ -9,13 +9,13 @@ class AuthView
     public function __construct()
     {
         $this->smarty = new Smarty();
+        $this->smarty->setTemplateDir(__DIR__ . './../public/templates/');
     }
 
     public function renderAuth($root = null, $errors = null)
     {
         $this->smarty->assign('root', $root);
-        // $this->smarty->assign('errors', $errors);
-        // $this->smarty->assign('styleFileName', 'auth');
-        $this->smarty->display('../../public/templates/auth.tpl');
+
+        $this->smarty->display('tabla.tpl');
     }
 }
