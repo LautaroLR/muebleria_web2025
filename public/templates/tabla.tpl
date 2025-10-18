@@ -1,4 +1,5 @@
 {include file= './head.tpl'}
+{include file= './navbar.tpl'}
 <html lang="es">
 
 <body>
