@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-09-2025 a las 23:52:48
+-- Tiempo de generación: 18-10-2025 a las 17:51:14
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -38,6 +38,28 @@ CREATE TABLE `administradores` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `_id` int(11) NOT NULL,
+  `nombre` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`_id`, `nombre`) VALUES
+(1, 'Sala'),
+(2, 'Oficina'),
+(3, 'Dormitorio'),
+(4, 'Comedor'),
+(5, 'Entrada');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `clientes`
 --
 
@@ -59,10 +81,31 @@ CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
   `nombre` varchar(255) NOT NULL,
   `descripcion` text DEFAULT NULL,
-  `categoria` varchar(100) NOT NULL,
+  `categoria` int(100) NOT NULL,
   `precio` decimal(10,2) NOT NULL,
   `stock` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id`, `nombre`, `descripcion`, `categoria`, `precio`, `stock`) VALUES
+(1, 'Sofá Chesterfield', 'Sofá de cuero genuino con estilo clásico chesterfield', 1, 1200.00, 15),
+(2, 'Mesa de Centro Moderna', 'Mesa de centro de vidrio templado con base de metal', 1, 450.00, 8),
+(3, 'Silla Ejecutiva', 'Silla ergonómica para oficina con soporte lumbar', 2, 350.00, 20),
+(4, 'Cama King Size', 'Cama de madera maciza con cabecero tapizado', 3, 1800.00, 6),
+(5, 'Armario Ropero', 'Armario de 4 puertas con espejo y cajones', 3, 950.00, 10),
+(6, 'Mesa de Comedor', 'Mesa extensible de roble para 6-8 personas', 4, 780.00, 7),
+(7, 'Sillas de Comedor', 'Juego de 4 sillas de comedor estilo contemporáneo', 4, 320.00, 12),
+(8, 'Estantería Librero', 'Estantería modular de 5 niveles en color nogal', 2, 290.00, 18),
+(9, 'Sillón Reclinable', 'Sillón reclinable con soporte para pies y masaje', 1, 670.00, 9),
+(10, 'Mesa de Noche', 'Mesa de noche con 2 cajones y estante inferior', 3, 150.00, 25),
+(11, 'Escritorio Ejecutivo', 'Escritorio de oficina con cajonera incorporada', 2, 520.00, 11),
+(12, 'Sofá Cama', 'Sofá convertible en cama individual, ideal para visitas', 1, 890.00, 5),
+(13, 'Vitrina Cristal', 'Vitrina para vajilla con puertas de cristal y luces LED', 4, 1250.00, 4),
+(14, 'Banco de Entrada', 'Banco con almacenamiento para entrada o recibidor', 5, 380.00, 14),
+(15, 'Mueble TV Moderno', 'Mueble para TV con espacio para equipos y almacenamiento', 1, 610.00, 8);
 
 -- --------------------------------------------------------
 
@@ -103,6 +146,12 @@ ALTER TABLE `administradores`
   ADD UNIQUE KEY `email` (`email`);
 
 --
+-- Indices de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`_id`);
+
+--
 -- Indices de la tabla `clientes`
 --
 ALTER TABLE `clientes`
@@ -113,7 +162,8 @@ ALTER TABLE `clientes`
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_productos_categorias` (`categoria`);
 
 --
 -- Indices de la tabla `ventas`
@@ -141,6 +191,12 @@ ALTER TABLE `administradores`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
@@ -150,7 +206,7 @@ ALTER TABLE `clientes`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
@@ -167,6 +223,12 @@ ALTER TABLE `ventas_detalle`
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `productos`
+--
+ALTER TABLE `productos`
+  ADD CONSTRAINT `fk_productos_categorias` FOREIGN KEY (`categoria`) REFERENCES `categorias` (`_id`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `ventas`
