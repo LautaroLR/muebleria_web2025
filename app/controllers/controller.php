@@ -4,7 +4,7 @@ require_once './app/model/model.php';
 require_once './app/view/catalogo.php'; 
 
 
-class modelController {
+class catalogoController {
     private $model;
     private $view;
  

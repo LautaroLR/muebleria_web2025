@@ -10,6 +10,7 @@ class AuthView
     {
         $this->smarty = new Smarty();
         $this->smarty->setTemplateDir(__DIR__ . '/../../public/templates/');
+        $this->smarty->assign('base_url', BASE_URL);
     }
 
     public function renderAuth($root = null, $errors = null)

@@ -8,6 +8,7 @@ define('DB_CHARSET', 'utf8');
 <?php
     const MYSQL_USER = 'root';
     const MYSQL_PASS = '';
-    const MYSQL_DB = 'dbtasks';
+    const MYSQL_DB = 'muebleria';
     const MYSQL_HOST = 'localhost';
+?>
 

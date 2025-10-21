@@ -1,28 +1,30 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2025-10-18 01:39:01
+/* Smarty version 3.1.34-dev-7, created on 2025-10-21 15:34:02
   from 'C:\xampp\htdocs\muebleria_web2025\public\templates\tabla.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_68f2d3951a4b86_12201342',
+  'unifunc' => 'content_68f78bca38bed6_06303161',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '954cefb9570eeda573a83c945e03486400435f0c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\muebleria_web2025\\public\\templates\\tabla.tpl',
-      1 => 1760741390,
+      1 => 1761053629,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:./head.tpl' => 1,
+    'file:./navbar.tpl' => 1,
   ),
 ),false)) {
-function content_68f2d3951a4b86_12201342 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68f78bca38bed6_06303161 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:./head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+$_smarty_tpl->_subTemplateRender('file:./navbar.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <html lang="es">
 

@@ -1,9 +1,8 @@
- <?php
-
+<?php
 require_once './libs/Smarty.class.php';
 require_once './config/config.php';
 
-class CatalogoView
+class AdminView
 {
     private $smarty;
 
@@ -14,11 +13,10 @@ class CatalogoView
         $this->smarty->assign('base_url', BASE_URL);
     }
 
-    public function renderTable($items)
+    public function renderAdminHome($userName, $userId, $items, $categorias)
     {
-        $this->smarty->assign('items', $items);
-        $this->smarty->display('tabla.tpl');    
+        echo var_dump($userName, $userId, $items, $categorias);
+        $this->smarty->assign('userName', $userName, $userId, $items, $categorias);
+        $this->smarty->display('categorias.tpl');
     }
-
-    
 }

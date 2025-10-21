@@ -12,7 +12,9 @@ $verb = $_SERVER['REQUEST_METHOD'];
 $r = new Router();
 
 $r->addRoute('login', 'GET', 'authController', 'showLogin');
-$r->addRoute('catalogo', 'GET', 'modelController', 'showItems');
+$r->addRoute('login', 'POST', 'authController', 'verifyUser');
+$r->addRoute('catalogo', 'GET', 'catalogoController', 'showItems');
+$r->addRoute('logout', 'GET', 'authController', 'logout');
 
 
 $r->route($url, $verb)

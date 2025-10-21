@@ -1,4 +1,29 @@
-{include file= './head.tpl'}
+<?php
+/* Smarty version 3.1.34-dev-7, created on 2025-10-21 21:04:45
+  from 'C:\xampp\htdocs\muebleria_web2025\public\templates\navbar.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.34-dev-7',
+  'unifunc' => 'content_68f7d94dc11521_39689200',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '2270106bcfe8659dff038c6ce8a8a7bc1cf4605e' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\muebleria_web2025\\public\\templates\\navbar.tpl',
+      1 => 1761073482,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:./head.tpl' => 1,
+  ),
+),false)) {
+function content_68f7d94dc11521_39689200 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender('file:./head.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
   <div class="container">
@@ -18,7 +43,8 @@
       <!-- Links principales -->
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{$base_url}catalogo">Inicio</a>
+          <a class="nav-link active" aria-current="page" href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+catalogo">Inicio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Nosotros</a>
@@ -50,7 +76,8 @@
         <a href="#" class="btn btn-dark me-2">
           <i class="bi bi-cart-fill"></i> Carrito
         </a>
-        <a href="{$base_url}login" class="btn btn-outline-dark">
+        <a href="<?php echo $_smarty_tpl->tpl_vars['base_url']->value;?>
+login" class="btn btn-outline-dark">
           <i class="bi bi-person-fill"></i> Ingresar
         </a>
       </div>
@@ -59,10 +86,14 @@
 </nav>
 
 <!-- Bootstrap JS (Bundle con Popper incluido) -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+>
 <!-- Íconos de Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
 </body>
 </html>
 
+<?php }
+}
